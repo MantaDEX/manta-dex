@@ -1,3 +1,4 @@
+import { useMetaCRM } from '@zenlink-interface/compat'
 import type { BreadcrumbLink, MaxWidth } from '@zenlink-interface/ui'
 import { Backdrop, Breadcrumb, Container, classNames } from '@zenlink-interface/ui'
 import React from 'react'
@@ -11,6 +12,7 @@ interface Props {
 }
 
 export function Layout({ children, maxWidth = '5xl', backdrop, className, breadcrumbs }: Props) {
+  useMetaCRM()
   return (
     <Container maxWidth={maxWidth} className={classNames(className, 'lg:mx-auto px-4 h-full')}>
       {breadcrumbs && <Breadcrumb home="/" links={breadcrumbs} />}

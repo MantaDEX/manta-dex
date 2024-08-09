@@ -5,6 +5,7 @@ import { Footer } from './Footer'
 import { NavItem, type NavItemProps } from './NavItem'
 import { NavItemList, type NavItemListProps } from './NavItemList'
 import { Shell, type ShellProps } from './Shell'
+import MetaCRM from './MetaCRM'
 
 export interface AppProps {
   Header: HeaderProps
@@ -13,6 +14,7 @@ export interface AppProps {
   Main: MainProps
   NavItem: NavItemProps
   NavItemList: NavItemListProps
+  MetaCRM: any
 }
 
 export const App = {
@@ -23,6 +25,7 @@ export const App = {
   NavItemList,
   Footer,
   Main,
+  MetaCRM
 }
 
 export { AppType } from './Header'

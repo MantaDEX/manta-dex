@@ -8,6 +8,7 @@ import type { FC } from 'react'
 import { Provider } from 'react-redux'
 import { WagmiConfig } from 'wagmi'
 import { configureStore } from '@reduxjs/toolkit'
+import MetaCRM from '@zenlink-interface/ui/app/MetaCRM'
 import { PolkadotApiProvider } from '@zenlink-interface/polkadot'
 import { parachains } from '@zenlink-interface/polkadot-config'
 import { ThemeProvider } from 'next-themes'
@@ -45,6 +46,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
             <LanguageProvider>
               <ThemeProvider attribute="class" disableTransitionOnChange enableSystem={false}>
                 <App.Shell>
+                  <MetaCRM/>
                   <DefaultSeo {...SEO} />
                   <Header />
                   <TokenListsUpdaters chainIds={SUPPORTED_CHAIN_IDS} />

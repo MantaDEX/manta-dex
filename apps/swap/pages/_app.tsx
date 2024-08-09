@@ -10,6 +10,7 @@ import { App, ToastContainer } from '@zenlink-interface/ui'
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import { DefaultSeo } from 'next-seo'
+import MetaCRM from '@zenlink-interface/ui/app/MetaCRM'
 import { parachains } from '@zenlink-interface/polkadot-config'
 import { PolkadotApiProvider } from '@zenlink-interface/polkadot'
 import { LanguageProvider, storage, storageMiddleware } from '@zenlink-interface/shared'
@@ -45,6 +46,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
             <LanguageProvider>
               <ThemeProvider attribute="class" disableTransitionOnChange enableSystem={false}>
                 <App.Shell>
+                  <MetaCRM/>
                   <DefaultSeo {...SEO} />
                   <Header />
                   <TokenListsUpdaters chainIds={SUPPORTED_CHAIN_IDS} />
